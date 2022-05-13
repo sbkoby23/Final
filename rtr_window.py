@@ -88,7 +88,7 @@ class rtr_window:
                     elif 'nstlim' in s and self.__nstlim == 0:
                         self.__nstlim = int(s[9:])
         #Parse rstr, k_list and ref_list for dvdl data
-        self.__dvdl = Resr_parse.get_dvdls(self.__rstr, self.__k_list, self.__ref_list)
+        self.__dvdl = Rstr_parse.get_dvdls(self.__rstr, self.__k_list, self.__ref_list)
         #Automatically determine lambda value
         if self.__lam == -1:
             self.__lam = float(re.findall('\d+\.\d+',self.__rstr )[0])
